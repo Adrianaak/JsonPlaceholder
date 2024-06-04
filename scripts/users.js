@@ -3,7 +3,7 @@
 window.onload = () => {
     let theDropdown = document.querySelector("#usersDropdown");
 
-    fetch("https://jsonplaceholder.typicode.com/users", {})
+    fetch("https://jsonplaceholder.typicode.com/users")
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -14,7 +14,7 @@ window.onload = () => {
             data.forEach((user) => {
                 let newOption = document.createElement("option");
                 newOption.textContent = user.name;
-                newOption.value = user.id;
+                newOption.value = user;
                 theDropdown.appendChild(newOption);
             });
         })
