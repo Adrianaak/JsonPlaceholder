@@ -6,7 +6,7 @@ window.onload = () => {
 
 function handleButtonClick() {
     // Get the todo ID from the input field
-    var todoId = document.getElementById("todoId").value;
+    let todoId = document.getElementById("todoId").value;
 
     // Call the API using fetch
     fetch("https://jsonplaceholder.typicode.com/todos/" + todoId)
